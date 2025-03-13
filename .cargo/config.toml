@@ -2,4 +2,9 @@
 rustflags = ["-C", "target-feature=+crt-static"]
 
 [target.'cfg(windows)'.bin]
-rustflags = ["-C", "link-args=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup"] 
+rustflags = [
+    "-C", "link-args=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup",
+    "-C", "target-feature=+crt-static",
+    "-C", "link-args=/MANIFEST:NO",
+    "-C", "link-args=/MANIFESTUAC:level='asInvoker' uiAccess='false'"
+] 
