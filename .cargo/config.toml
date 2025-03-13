@@ -1,0 +1,5 @@
+[target.'cfg(windows)'.build]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+[target.'cfg(windows)'.bin]
+rustflags = ["-C", "link-args=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup"] 

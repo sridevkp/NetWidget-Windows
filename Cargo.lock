@@ -3,6 +3,18 @@
 version = 4
 
 [[package]]
+name = "NetWidget"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "embed-resource",
+ "humansize",
+ "sysinfo",
+ "tray-icon",
+ "tray-item",
+]
+
+[[package]]
 name = "adler2"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -863,18 +875,6 @@ dependencies = [
  "png",
  "thiserror 2.0.12",
  "windows-sys 0.59.0",
-]
-
-[[package]]
-name = "net-widget"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "embed-resource",
- "humansize",
- "sysinfo",
- "tray-icon",
- "tray-item",
 ]
 
 [[package]]
